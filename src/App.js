@@ -1,25 +1,12 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Editor from "@monaco-editor/react";
+import Navbar from './Components/Navbar';
+import Axios from 'axios';
+import spinner from './spinner.svg';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const [userCode, setUser] = useState(``);
+  const [userLang, setUserLang] = useState("C++");
+  const 
 }
-
-export default App;
